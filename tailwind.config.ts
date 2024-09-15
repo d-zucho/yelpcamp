@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
         bg: 'var(--bg)',
         'bg-secondary': 'var(--bg-secondary)',
