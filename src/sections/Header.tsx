@@ -2,9 +2,10 @@ import Image from 'next/image'
 // import Logo from '/public/icons/Logo.svg'
 import Logo from '@/assets/Logo.svg'
 import Link from 'next/link'
-import { buttonVariants } from './ui/button'
+import { buttonVariants } from '../components/ui/button'
 import { cn } from '@/lib/utils'
-import MaxWidthWrapper from './MaxWidthWrapper'
+import MaxWidthWrapper from '../components/MaxWidthWrapper'
+import MobileNav from '@/components/MobileNav'
 
 const Header = () => {
   return (
@@ -15,7 +16,8 @@ const Header = () => {
           <Logo />
           <Link href='/'>Home</Link>
         </div>
-        <div className='flex items-center gap-6'>
+
+        <div className='hidden sm:flex items-center gap-6'>
           <Link href='/login'>Login</Link>
           <Link
             href='/register'
@@ -24,6 +26,7 @@ const Header = () => {
             Create an account
           </Link>
         </div>
+        <MobileNav className='sm:hidden' />
       </MaxWidthWrapper>
     </header>
   )
