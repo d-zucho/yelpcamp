@@ -8,6 +8,7 @@
   --bg: #f9f6f1;
   --bg-secondary: #cacaca;
   --body-reg: #171717;
+  --body-lighter: #595959;
   --my-success: #16a085;
 
   /* font size */
@@ -42,6 +43,7 @@ body {
 
 @layer base {
   :root {
+    --card-border: #dadada;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;

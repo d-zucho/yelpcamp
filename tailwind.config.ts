@@ -14,7 +14,9 @@ const config: Config = {
         bg: 'var(--bg)',
         'bg-secondary': 'var(--bg-secondary)',
         'body-reg': 'var(--body-reg)',
+        'body-lighter': 'var(--body-lighter)',
         'my-success': 'var(--my-success)',
+        'card-border': 'var(--card-border)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -70,6 +72,11 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
         btn: 'var(--btn-radius)',
+      },
+      backgroundImage: {
+        'landing-hero-mobile': 'url(/images/Hero-mobile.jpg)',
+        'landing-hero-desktop': 'url(/images/Hero-desktop.png)',
+        'landing-hero-tablet': 'url(/images/Hero-tablet.png)',
       },
     },
   },
