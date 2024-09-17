@@ -17,6 +17,8 @@ const config: Config = {
         'body-lighter': 'var(--body-lighter)',
         'my-success': 'var(--my-success)',
         'card-border': 'var(--card-border)',
+        'input-bg': 'var(--input-bg)',
+        'input-placeholder': 'var(--input-placeholder)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -1,3 +1,5 @@
+import { z } from 'zod'
+
 export type LANDING_FACT = {
   text: string
 }

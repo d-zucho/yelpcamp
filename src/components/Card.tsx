@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card = ({ image, title, description }: CardProps) => {
   return (
-    <article className='p-4 relative border border-card-border flex flex-col w-fit rounded-md'>
+    <article className='p-4 relative border border-card-border flex flex-col w-fit rounded-md shadow-lg'>
       <div className='w-full relative'>
         <Image
           src={image}
