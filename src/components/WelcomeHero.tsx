@@ -8,7 +8,7 @@ const WelcomeHero = () => {
   return (
     <section className='text-body-lighter'>
       <MaxWidthWrapper className=''>
-        <div className='bg-bg rounded-lg px-14 py-[70px]'>
+        <div className='bg-bg rounded-lg px-14 py-[70px] shadow-lg'>
           <div className='max-w-[400px] '>
             <div>
               <h2 className='text-black text-h2-base font-bold'>

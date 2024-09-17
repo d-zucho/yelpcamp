@@ -3,23 +3,27 @@ import { buttonVariants } from './ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
-const Card = () => {
+interface CardProps {
+  image: string
+  title: string
+  description: string
+}
+
+const Card = ({ image, title, description }: CardProps) => {
   return (
-    <article className='max-w-sm p-4 relative border border-card-border flex flex-col w-fit'>
+    <article className='p-4 relative border border-card-border flex flex-col w-fit rounded-md'>
       <div className='w-full relative'>
         <Image
-          src='/BuloySprings2.png'
-          alt=''
+          src={image}
+          alt='Beautiful Destinations'
           width={300}
           height={200}
-          className=''
+          className='w-full'
         />
       </div>
       <div className='mt-4'>
-        <h3 className='font-bold text-body-reg'>Some Place</h3>
-        <p className='text-body-lighter mt-2'>
-          This is one of the best beach camping sites, beautiful and pristine.
-        </p>
+        <h3 className='font-bold text-body-reg'>{title}</h3>
+        <p className='text-body-lighter mt-2'>{description}</p>
       </div>
       <Link
         href={'/welcome'}
