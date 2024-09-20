@@ -1,19 +1,22 @@
-import { z } from 'zod'
+import * as z from 'zod'
 
-export const SignUpFormSchema = z.object({
-  username: z
-    .string({
-      required_error: 'Username is required',
-    })
-    .min(5, {
-      message: 'Username must be at least 5 characters long',
-    })
-    .max(25, {
-      message: 'Username must be at most 25 characters long',
-    })
-    .regex(
-      /^[a-zA-Z0-9_]+$/,
-      'The username must contain only letters, numbers and underscore (_)'
-    ),
-  password: z.string({ required_error: 'Password is required' }),
-})
+export const RegisterSchema = z
+  .object({
+    email: z.string().email({
+      message: 'Please enter a valid email address',
+    }),
+    name: z.string().min(2, {
+      message: 'Name must be at least 2 characters',
+    }),
+    password: z.string().min(8, {
+      message: 'Password must be at least 8 characters',
+    }),
+    confirmPassword: z.string().min(8, {
+      message: 'Password must be at least 8 characters',
+    }),
+    // check to make sure confirmPassword === password
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: 'Passwords must match',
+    path: ['confirmPassword'],
+  })

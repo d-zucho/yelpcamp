@@ -3,13 +3,13 @@ import { buttonVariants } from './ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
-interface CardProps {
+interface FeaturedCardProps {
   image: string
   title: string
   description: string
 }
 
-const Card = ({ image, title, description }: CardProps) => {
+const FeaturedCard = ({ image, title, description }: FeaturedCardProps) => {
   return (
     <article className='p-4 relative border border-card-border flex flex-col w-fit rounded-md shadow-lg'>
       <div className='w-full relative'>
@@ -35,4 +35,4 @@ const Card = ({ image, title, description }: CardProps) => {
   )
 }
 
-export default Card
+export default FeaturedCard

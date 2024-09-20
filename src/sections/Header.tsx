@@ -18,9 +18,9 @@ const Header = () => {
         </div>
 
         <div className='hidden sm:flex items-center gap-6'>
-          <Link href='/login'>Login</Link>
+          <Link href='/auth/login'>Login</Link>
           <Link
-            href='/register'
+            href='/auth/register'
             className={cn(buttonVariants({}), 'bg-body-reg')}
           >
             Create an account

@@ -1,4 +1,4 @@
-import Card from '@/components/Card'
+import Card from '@/components/FeaturedCard'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { WELCOME_FEATURED_CARDS } from '@/constants'
