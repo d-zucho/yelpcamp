@@ -37,12 +37,12 @@ const MobileNav = ({ className }: MobileNavProps) => {
                 <Link href='/'>Home</Link>
               </SheetClose>
               <SheetClose>
-                <Link href='/login'>Login</Link>
+                <Link href='/auth/login'>Login</Link>
               </SheetClose>
               <div className='w-full'>
                 <SheetClose className='w-full'>
                   <Link
-                    href={`/register`}
+                    href={`/auth/register`}
                     className={cn(buttonVariants({}), 'w-5/6')}
                   >
                     Create an account
