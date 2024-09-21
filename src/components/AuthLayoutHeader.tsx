@@ -6,9 +6,11 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 
 const AuthLayoutHeader = () => {
   return (
-    <div className='py-10'>
+    <div className='py-10 '>
       <MaxWidthWrapper className='flex justify-between items-center '>
-        <Logo />
+        <Link href={'/welcome'}>
+          <Logo />
+        </Link>
         <Link
           href='/welcome'
           className='text-body-lighter flex items-center gap-1'

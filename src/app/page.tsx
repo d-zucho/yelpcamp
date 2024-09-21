@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 
 const LandingPage = () => {
   return (
-    <section className='relative'>
+    <section className='relative w-full'>
       <div className='bg-landing-hero-mobile sm:bg-landing-hero-tablet lg:bg-landing-hero-desktop  bg-cover bg-center w-auto h-[375px] lg:h-screen lg:w-1/2 lg:absolute top-0 right-0 lg:max-w-[660px]'></div>
       {/* <div className='py-10 px-5'> */}
       <MaxWidthWrapper className='py-10'>

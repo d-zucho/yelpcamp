@@ -13,7 +13,9 @@ const Header = () => {
       <MaxWidthWrapper className='flex justify-between items-center'>
         {/* <Image src={Logo} alt='YelpCamp' /> */}
         <div className='flex gap-8'>
-          <Logo />
+          <Link href={'/welcome'}>
+            <Logo />
+          </Link>
           <Link href='/'>Home</Link>
         </div>
 

@@ -13,9 +13,12 @@ import {
 } from './ui/form'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
-import { z } from 'zod'
+import { set, z } from 'zod'
+import { useFormStatus } from 'react-dom'
+import { useState } from 'react'
 
 const RegisterForm = () => {
+  const [loading, setLoading] = useState(false)
   const form = useForm({
     resolver: zodResolver(RegisterSchema),
     defaultValues: {
@@ -27,8 +30,11 @@ const RegisterForm = () => {
   })
 
   const onSubmit = (data: z.infer<typeof RegisterSchema>) => {
+    setLoading(true)
     console.log(data)
   }
+
+  const { pending } = useFormStatus()
 
   return (
     <CardWrapper
@@ -100,8 +106,8 @@ const RegisterForm = () => {
               )}
             />
           </div>
-          <Button type='submit' className='w-full'>
-            Register
+          <Button type='submit' className='w-full' disabled={pending}>
+            {loading ? 'Loading...' : 'Sign up'}
           </Button>
         </form>
       </Form>

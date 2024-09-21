@@ -1,19 +1,17 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import Logo from '@/assets/Logo.svg'
-import Link from 'next/link'
-import LeftArrow from '@/components/LeftArrow'
-import { motion, MotionConfig } from 'framer-motion'
-import SignUpForm from '@/components/RegisterForm'
 import RegisterForm from '@/components/RegisterForm'
 
 const RegisterPage = () => {
   return (
-    <div className='w-full h-screen'>
-      <MaxWidthWrapper className=''>
-        <h2 className='text-body-reg text-h2-base font-bold'>
-          Start exploring camps from all around the world.
-        </h2>
-        <RegisterForm />
+    <div className='w-full'>
+      <MaxWidthWrapper className=' w-full'>
+        <div className=''>
+          <h2 className='text-body-reg text-h2-base font-bold py-4 text-center'>
+            Start exploring camps from all around the world.
+          </h2>
+          <RegisterForm />
+        </div>
+        <div className='bg-bg'> </div>
       </MaxWidthWrapper>
     </div>
   )
