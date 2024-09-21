@@ -80,6 +80,35 @@ const config: Config = {
         'landing-hero-desktop': 'url(/images/Hero-desktop.png)',
         'landing-hero-tablet': 'url(/images/Hero-tablet.png)',
       },
+      animation: {
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+        'move-left': 'move-left 1s linear infinite',
+        'move-right': 'move-right 1s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
+        'move-left': {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
+        },
+        'move-right': {
+          '0%': {
+            transform: 'translateX(-50%)',
+          },
+          '100%': {
+            transform: 'translateX(0%)',
+          },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

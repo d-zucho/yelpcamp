@@ -4,14 +4,20 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 interface FeaturedCardProps {
+  spotId: number
   image: string
   title: string
   description: string
 }
 
-const FeaturedCard = ({ image, title, description }: FeaturedCardProps) => {
+const FeaturedCard = ({
+  image,
+  title,
+  description,
+  spotId,
+}: FeaturedCardProps) => {
   return (
-    <article className='p-4 relative border border-card-border flex flex-col w-fit rounded-md shadow-lg'>
+    <article className='p-4 relative border border-card-border min-w-[300px] flex flex-col w-fit rounded-md shadow-lg'>
       <div className='w-full relative'>
         <Image
           src={image}
